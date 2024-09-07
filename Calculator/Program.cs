@@ -31,11 +31,18 @@ while (choice != -1)
 
         Console.Clear();
 
-        Console.WriteLine("Enter the first number");
-        num1 = Convert.ToInt32(Console.ReadLine());
-        Console.WriteLine("Enter the second number");
-        num2 = Convert.ToInt32(Console.ReadLine());
-
+        if (choice >= 0 && choice < 5)
+        {
+            Console.WriteLine("Enter the first number");
+            num1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the second number");
+            num2 = Convert.ToInt32(Console.ReadLine());
+        }
+        else
+        {
+            throw new Exception("Invalid Choice");
+        }
+        
         switch (choice)
         {
             case 1:
